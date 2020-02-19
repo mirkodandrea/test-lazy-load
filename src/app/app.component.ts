@@ -12,6 +12,6 @@ export class AppComponent  {
 
   load(){
     this.container.clear();
-    this.loader.load('lazy-comp', this.container);
+    this.loader.load('my-component', this.container);
   }
 }

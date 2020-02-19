@@ -4,6 +4,10 @@ export const lazyWidgets: { name: string, loadChildren: () => Promise<NgModuleFa
   {
     name: 'lazy-comp',
     loadChildren: () => import('./lazy-comp/lazy-mod.module').then(m => m.LazyModModule)
+  },
+  {
+    name: 'my-component',
+    loadChildren: () => import('./my-module/my-module.module').then(m => m.MyModuleModule)
   }
 ]
 

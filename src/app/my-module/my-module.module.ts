@@ -9,6 +9,9 @@ import { DynamicModule } from 'ng-dynamic-component';
     CommonModule,
     DynamicModule.forRoot()
   ],
-  declarations: [MyComponentComponent]
+  declarations: [MyComponentComponent],
+  entryComponents: [MyComponentComponent]
 })
-export class MyModuleModule { }
+export class MyModuleModule { 
+  static entry = MyComponentComponent;
+}
