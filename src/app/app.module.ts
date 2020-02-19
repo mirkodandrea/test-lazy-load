@@ -9,8 +9,10 @@ import { LazyCompComponent } from './lazy-comp/lazy-comp.component';
 import { LazyLoaderService } from './lazy-loader.service';
 import {LAZY_WIDGETS} from './tokens';
 
+import { DynamicModule } from 'ng-dynamic-component';
+
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
+  imports:      [ BrowserModule, FormsModule, DynamicModule.forRoot() ],
   declarations: [ AppComponent, HelloComponent ],
   bootstrap:    [ AppComponent ],
   providers: [{ provide: LAZY_WIDGETS, useFactory: lazyArrayToObj }, LazyLoaderService, provideRoutes(lazyWidgets)]
